@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:PracticeActivity.ViewModels"
+             x:Class="PracticeActivity.Views.UpdServicePage">
+    <ContentPage.BindingContext>
+        <vm:UpdServiceViewModel/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Datos a modificar"
+                VerticalOptions="Center" 
+                />
+            <Entry Text="{Binding UpdDescripcion}"/>
+            <Entry Text="{Binding UpdPrecio}"/>
+            <Button Text="Actualizar" Command="{Binding Update}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
